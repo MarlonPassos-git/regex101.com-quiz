@@ -3,7 +3,9 @@
 
 # Description
 
+This reposotory was inspired bye the [wiserookami/Regex101.com-Quiz-reference](https://github.com/wiserookami/Regex101.com-Quiz-reference)
 
+These answers are from my origin, so perhaps there may be more efficient ways to solve each problem. So if you're going to use some RegExp here in production, I recommend researching more
 
 	
 
@@ -41,31 +43,33 @@
 ## Task 1: Word Boundaries ##
         Question: Check if a string contains the word word in it (case insensitive). If you have no idea, I guess you could try /word/.
 
-        Solution: \bword\b
+        RegExp: \bword\b
 	
 
 ## Task 2: Capitalizing I ##
-        Question: 
+        Question: Use substitution to replace every occurrence of the word i with the word I (uppercase, I as in me). E.g.: i'm replacing it. am i not? -> I'm replacing it. am I not?. A regex match is replaced with the text in the Substitution field when using substitution.
         
-        Solution:
+        RegExp: /\bi\b/g
+	
+	Substitution: I
 	
 
 ## Task 3: Uppercase Consonants ##
-        Question: 
+        Question: With regex you can count the number of matches. Can you make it return the number of uppercase consonants (B,C,D,F,..,X,Y,Z) in a given string? E.g.: it should return 3 with the text ABcDeFO!. Note: Only ASCII. We consider Y to be a consonant! Example: the regex /./g will return 3 when run against the string abc.
         
-        Solution:
+        RegExp: /(?![AEIOU])[A-Z]/g
 	
 
 ## Task 4: Retrieve Numbers ##
-        Question: 
+        Question: Count the number of integers in a given string. Integers are, for example: 1, 2, 65, 2579, etc.
         
-        Solution:
+        RegExp: /\d+/g
 	
 
 ## Task 5: Whitespace ##
-        Question: 
+        Question: Find all occurrences of 4 or more whitespace characters in a row throughout the string.
         
-        Solution:
+        RegExp: /\s{4}\s*/g
 	
 
 ## Task 6: Broken Keyboard ##
